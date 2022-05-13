@@ -1,1 +1,11 @@
-
+<xml>
+		<Bug report ID> 1 </Bug report ID>
+		<Title> "When the cart contains one item, it is not possible to add a second item via the add to cart button on a product page" </Title> 
+		<Steps to reproduce>
+                  <Step 1> "add one item to cart" </Step 1>
+                  <Step 2> "go to product abc via the search bar" </Step 2>
+                  <Step 3> "add new item to cart via 'add to cart' button" </Step 3>
+                  <Step 4> "go to cart" </Step 4>
+        </Steps to reproduce>
+		<Expected Result> "The cart should contain 2 items" </Expected Result>
+		<Actual Result>  "The cart contains only 1 itemt"</Actual Result>
