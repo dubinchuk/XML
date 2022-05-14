@@ -1,0 +1,76 @@
+ 21. Создать внешний репозиторий c названием XML.
+ github.com => Repositories => New => XML
+ 22. Клонировать репозиторий XML на локальный компьютер.
+ git clone (вставляем ссылку на внешний репозиторий путём копирования из Code - HTTPS)
+ 23. Внутри локального XML создать файл “new.xml”.
+ cd XML
+ touch new.xml
+ 24. Добавить файл под гит.
+ git add new.xml
+ 25. Закоммитить файл.
+ git commit -m "new xml file added"
+ 26. Отправить файл на внешний GitHub репозиторий.
+ git push 
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+ vim new.xml
+ i
+<xml>
+	<ФИО> "Дубинчук Евгений" </ФИО>
+	<Возраст> 34 </Возраст>
+	<Количество домашних животных> 0 </Количество домашних животных>
+	<Будущая желаемая зарплата> "100 т.р." </Будущая желаемая зарплата>
+Esc:wq
+ 28. Отправить изменения на внешний репозиторий.
+ git commit -am "new.xml updated"
+ git push
+ 29. Создать файл preferences.xml
+ touch preferences.xml
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+ vim preferences.xml
+ i
+ <xml>
+        <Любимый фильм> "Начало" </Любимый фильм>
+        <Любимый сериал> "Очень странные дела" </Любимый сериал>
+        <Любимая еда> "Мясо по-французски" </Любимая еда>
+        <Любимое время года> "Лето" </Любимое время года>
+        <Страна, которую хотели бы посетить> "Аргентина" </Страна, которую хотели бы посетить>
+Esc:wq
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+ vim sklls.xml
+ i
+ <xml>
+        <Tools> "Git Bash, JavaScript, Postman, VS Code, DevTools, DBeaver, Charles Proxy, Fiddler, Jmeter" </Tools>
+        <Programming basics> "JavaScript, Python, SQL" </Programming basics>
+        <Testing documentation> "Test cases, Check lists, Bug reports" </Testing documentation>
+        <Testing skills> "Manual functional testing, Mobile testing, API testing, Stress testing" </Testing skills>
+Esc:wq
+ 32. Сделать коммит в одну строку.
+ git add . && git commit -m "preferences.xml and skills.xml added"
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+ git push
+ 34. На веб интерфейсе создать файл bug_report.xml.
+Зайти в репозиторий XML
+Кликнуть на кнопку с выпадающим списком "Add file"
+Выбрать "Create new file"
+В открывшемся окошке ввести имя файла "bug_report.xml"
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ Кликнуть на кнопку "Commit new file" внизу страницы
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+Кликнуть по названию файла "bug_report.xml"
+Кликнуть на иконку "карандаш"
+В открывшемся окне добавляем запись:
+<xml>
+		<Bug report ID> 1 </Bug report ID>
+		<Title> "When the cart contains one item, it is not possible to add a second item via the add to cart button on a product page" </Title> 
+		<Steps to reproduce>
+                  <Step 1> "add one item to cart" </Step 1>
+                  <Step 2> "go to product abc via the search bar" </Step 2>
+                  <Step 3> "add new item to cart via 'add to cart' button" </Step 3>
+                  <Step 4> "go to cart" </Step 4>
+        </Steps to reproduce>
+		<Expected Result> "The cart should contain 2 items" </Expected Result>
+		<Actual Result>  "The cart contains only 1 itemt"</Actual Result>
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+  Кликнуть на кнопку "Commit new file" внизу страницы
+ 38. Синхронизировать внешний и локальный репозиторий XML
+ git pull
